@@ -1,0 +1,37 @@
+Введение
+	-Коммиты в GIT
+		git commit; git commit
+
+	-Ветвление в Git
+		git checkout -b bugFix
+
+	Ветки и слияния
+		git checkout -b bugFix
+		git commit
+		git checkout main
+		git commit
+		git merge bugFix
+
+	Git rebase
+		git checkout -b bugFix
+		git checkout main
+		git commit
+		git checkout bugFix
+		git rebase main
+
+Едем дальше
+	- Прогулка по Git
+		git checkout C4
+
+	- Относительные ссылки
+		git checkout bugFix^
+
+	- Оператор "~"
+		git branch -f main C6;
+		git checkout C1;
+		git branch -f bugFix HEAD~1
+
+	- Отмена изменений в Git
+		git reset HEAD~1
+		git checkout pushed
+		git revert pushed
