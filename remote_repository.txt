@@ -1,0 +1,83 @@
+Push & Pull - удалённые репозитории в Git!
+	Удалённые репозитории в Git
+		git clone
+
+	Удалённые ветки в Git
+		git commit
+		git checkout C1
+		git commit
+
+	Git Fetch
+		git fetch
+
+	Git Pull
+		git pull
+
+	Симуляция совместной работы
+		git clone
+		git fakeTeamwork main 2
+		git commit
+		git pull
+
+	Git Push
+		git commit
+		git commit
+		git push
+
+	Когда наработки расходятся
+		git clone
+		git fakeTeamwork main 1
+		git pull --rebase
+		git push
+
+	Remote Rejected!
+		git checkout -b feature
+		git push
+		git branch -f main HEAD~1
+
+
+Через origin – к звёздам. Продвинутое использование Git Remotes
+
+	Слияние фича-бранчей (веток)
+		git fetch
+		git rebase C8 side1
+		git rebase side1 side2
+		git rebase side2 side3
+		git branch -f main
+		git push
+
+	Merge? Нет, нет, спасибо.
+		git checkout main
+		git pull
+		git merge side1	
+		git merge side2	
+		git merge side3
+		git push	
+
+	Удалённые-отслеживаемые ветки
+		git checkout -b side o/main
+		git commit
+		git pull --rebase
+		git push
+
+	Аргументы команды Push
+		git push origin main
+		git push origin foo
+
+	Подробности аргумента <пункт назначения>
+		git push origin foo:main
+		git push origin main^:foo
+
+	Аргументы git fetch
+		git fetch origin foo:main
+		git fetch origin main^:foo
+		git checkout foo
+		git merge main
+
+	Странный <источник>
+		git push origin :foo 
+		git fetch origin :bar
+
+	Аргументы для pull
+		git pull origin bar:foo		
+		git pull origin main:side			
